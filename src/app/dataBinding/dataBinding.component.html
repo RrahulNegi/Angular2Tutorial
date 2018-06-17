@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<br/>
+<div *ngFor='let lst of list'>
+        <ul>
+                <li>{{lst.id}}</li>
+
+                <li>{{lst.name}}</li>
+        </ul>
+</div>
+
+<h1>{{twoWayBinding}}</h1>
+
+<ul><li><b>{{twoWayUsingPropertyAndEvent}}</b></li></ul>
+<!--Here we are binding name to the value property of input element -->
+<!--Here we are binding input event bind to the expressiion -->
+
+<input [value]="name" (input)="name=$event.target.value" />
+<br/>
+Helloo ... {{name}} 
+<br/>
+<br/>
+<ul><li><b>{{twoWayUsingNgModel}}</b></li></ul>
+
+<input [(ngModel)]="userName">
+<p>Helllo.. {{userName}}</p>

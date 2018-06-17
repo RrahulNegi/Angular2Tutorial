@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<br/>
+
+<button style="color:red">Button</button>
+<br/>
+<br/>
+
+<button style="color:red" [style.font.weight]="isBold ? 'bold' : 'normal'">Button</button>
+<br/>
+<br/>
+<button style="color:red" [style.font-size.px]="fontSize">Button</button>
+<br/>
+<br/>
+<ul><li><b>Adding multiple style</b></li></ul>
+<button style="color:red" [ngStyle]="addStyle()">Button</button>

@@ -1,0 +1,21 @@
+
+<input type="text" name="searchText"  [(ngModel)]="searchText"/>&nbsp;<input type="button" value="search" (click)="search()"/>
+<br/>
+<div *ngIf="productList.length>0" >
+        
+   <div *ngFor="let color of colorSet;"> 
+      <input type="checkbox" (change)="check($event)" >{{color}} 
+</div> 
+        <table >
+                <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Price</th>   
+                </tr>
+    <tr  *ngFor="let product of productList; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+        </table>
+</div>

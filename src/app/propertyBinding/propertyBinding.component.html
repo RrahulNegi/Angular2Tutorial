@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+
+<b><ul><li>{{interpolationTitle + curlBaase}}</li></ul></b>
+<br/>
+<input value="{{value}}" />
+<br/>
+<!-- If we use non string value to set an element property it wont work "isDisable== false"
+But still the button is disable 
+-->
+
+<button  disabled="{{isDisable}}" >Click Me</button>
+
+<br/>
+<b><ul><li>{{normalTitle+" (to set an element property to non string data , we must use property binding like [disabled]=\"\")"}}</li></ul></b>
+<br/>
+<!--to set an element property to non string data , we must use property binding-->
+<button  [disabled]="isDisable" >Click Me</button>
+<br/>
+<span [innerHtml]="headerValue"></span><br/>
+<b><ul><li>{{CanonicalTitle+ "(bind-innerHtlm)"}}</li></ul></b>
+<span bind-innerHtml="headerValue"></span><br/>
+<b><ul><li>{{badHtmlTitle+ " like  "+badHtml}}</li></ul></b>
+<span [innerHtml]="badHtml"></span>
+<br/>
+<b><ul><li>{{badHtmlTitle+ " without property binding like  "+badHtml}}</li></ul></b>
+{{badHtml}}
+
+
+
+
+

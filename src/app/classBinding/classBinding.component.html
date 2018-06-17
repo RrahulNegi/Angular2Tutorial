@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+
+<br/>
+
+<button class="colorClass">Button</button>
+<br/>
+<br/>
+
+<button [class]="classToApply">Button</button>
+<br/>
+<br/>
+<ul><li><b>Conditional class loading </b></li></ul>
+<br/>
+<button class ="colorClass" [class.boldClass]="isApplayBoldClass">Button</button>
+<br/>
+<br/>
+<button class ="colorClass" [class.boldClass]="!isApplayBoldClass">Button</button>
+
+<br/><ul><li><b>Add or remove multiple class </b></li></ul>
+<br/>
+<br/>
+<button class ="colorClass" [ngClass]="addClasses()">Button</button>

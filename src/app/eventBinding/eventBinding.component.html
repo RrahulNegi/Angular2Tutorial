@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<br/>
+
+<button style="color:red" (click)="onClick()">Button</button>
+<br/>
+<br/>
+
+<ul><li><b>Show Hide Email</b></li></ul>
+
+<table >
+        <tr>
+        <td>id</td>
+        <td>Name</td>
+        <td *ngIf='showDetails'>email</td>
+        </tr>
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td  *ngIf='showDetails'>{{emp.email}}</td>
+        </tr>
+    </table>
+    <br/> 
+    <button (click)="toggleDetails()">{{showDetails? 'Hilde' : 'Show'}} Email</button>
+
+
