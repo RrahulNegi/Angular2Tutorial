@@ -21,6 +21,13 @@ import {ClassBindingComponent} from "./ClassBinding/classBinding.component"
 import {StyleBindingComponent} from "./StyleBinding/styleBinding.component"
 import {EventBindingComponent} from "./EventBinding/eventBinding.component"
 import {PipeComponent} from "./PipeComponent/pipeComponent.component"
+import {CustomPipeComponent} from "./CustomPipeComponent/customPipeComponent.component"
+import {EmployeeTitlePipe} from "./CustomPipeComponent/EmployeeTitlePipe"
+import {InputOutputComponent} from "./InputOutputComponent/InputOutputComponent.component"
+import {InputOutputChildComponent} from "./InputOutputChildComponent/InputOutputChildComponent.component"
+
+
+
 
 
 
@@ -46,7 +53,11 @@ import { RouterModule, Routes } from '@angular/router';
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    PipeComponent
+    PipeComponent,
+    CustomPipeComponent,
+    EmployeeTitlePipe,
+    InputOutputComponent,
+    InputOutputChildComponent
   ],
   imports: [
     BrowserModule,

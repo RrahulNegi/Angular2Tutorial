@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+
+<br/>
+
+
+
+<br/>
+<app-inputoutputChildBinding [all]="getTotalEmployeeCount()"
+                             [male]="getTotalMaleEmployeeCount()"
+                             [female]="getTotalFemaleEmployeeCount()"
+                            (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)" ></app-inputoutputChildBinding>
+<table >
+    <tr >
+        <th colspan="6">Employee Details</th>
+       
+    </tr>
+    <tr>
+    <td>Sno</td>
+    <td>id</td>
+    <td>Name</td>
+    <td>Gender</td>
+    <td>Salary</td>
+    <td>DateOfBirth</td>
+    
+    </tr>
+    <!-- Since we cant use bot ngFor and ngIf together so we have to use ng-container-->
+    <ng-container *ngFor="let employeeDetails of itemList; let i=index">
+    <tr  *ngIf="selectedEmployeeCountRadioButton=='All' || selectedEmployeeCountRadioButton==employeeDetails.gender">
+        <td>{{i+1}}</td>
+        <td>{{employeeDetails.id}}</td>
+        <td>{{employeeDetails.name | uppercase}}</td>
+        <td>{{employeeDetails.gender}}</td>
+        <td>{{employeeDetails.salary}}</td>
+        <td>{{employeeDetails.dob | date :'fullDate'}}</td>
+        
+        
+    </tr>
+</ng-container>
+</table>
+
+   

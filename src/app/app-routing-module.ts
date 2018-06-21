@@ -11,6 +11,10 @@ import {ClassBindingComponent} from "./ClassBinding/classBinding.component"
 import {StyleBindingComponent} from "./StyleBinding/styleBinding.component"
 import {EventBindingComponent} from "./EventBinding/eventBinding.component"
 import {PipeComponent} from "./PipeComponent/pipeComponent.component"
+import {CustomPipeComponent} from "./CustomPipeComponent/customPipeComponent.component"
+import {InputOutputComponent} from "./InputOutputComponent/InputOutputComponent.component"
+
+
 
 
 
@@ -35,6 +39,10 @@ const routes: Routes = [
    { path: 'styleBinding',  component: StyleBindingComponent } ,
    { path: 'eventBinding',  component: EventBindingComponent } ,
    { path: 'pipe',  component: PipeComponent } ,
+   { path: 'customPipe',  component: CustomPipeComponent } ,
+   {path : 'inputoutputBinding', component: InputOutputComponent}
+   
+   
 //   { path: 'purchaseOfDay',  component: PurchaseOfDayComponent } 
   
   
